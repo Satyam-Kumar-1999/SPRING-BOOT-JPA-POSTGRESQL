@@ -37,10 +37,11 @@ public class ProductDAOImplementation implements ProductDAO {
 	@Override
 	public void save(Products product) {
 		Session session = entityManager.unwrap(Session.class);
-		session.persist(product);
+		session.merge(product);
 		
 	}
 
+	 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub

@@ -46,9 +46,9 @@ public class ProductController {
 	
 	
 	@PutMapping("/products")
-	public Products UPDATE(@RequestBody Products product) {
+	public Products UPDATE(Products product) {
 		pservice.save(product);
-		return product;
+		 return product;
 	}
 	
 	
